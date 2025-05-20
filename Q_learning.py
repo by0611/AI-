@@ -96,8 +96,8 @@ def extract_path(start, goal):
 path = extract_path(start, goal)
 
 # 輸出結果
-print("\n✅ 最短路徑 (state index):", path)
-print("📍 座標路徑:", [state_to_pos(s) for s in path])
+print("\n最短路徑 (state index):", path)
+print("座標路徑:", [state_to_pos(s) for s in path])
 
 # 顯示迷宮路徑（可視化）
 display_maze = maze.astype(str)
@@ -112,6 +112,6 @@ for s in path:
 display_maze[state_to_pos(start)] = 'S'
 display_maze[state_to_pos(goal)] = 'G'
 
-print("\n🧭 迷宮最短路徑（文字版）：")
+print("\n迷宮最短路徑(文字版):")
 for row in display_maze:
     print(' '.join(row))
